@@ -1,0 +1,86 @@
+---
+# 语言：C++
+Language:        Cpp
+
+# 基础风格：Microsoft
+# 这会导入微软的基础设置，我们在此基础上微调
+BasedOnStyle:  Microsoft
+
+# --- 缩进设置 ---
+# 缩进宽度：4空格
+IndentWidth:     4
+# Tab宽度：4空格
+TabWidth:        4
+# 使用空格代替Tab
+UseTab:          Never
+# Switch中的Case标签需要缩进 (VS默认是缩进的)
+IndentCaseLabels: true
+# 命名空间内部不缩进 (VS默认为了节省横向空间通常不缩进)
+# 如果你喜欢缩进，改为: All
+NamespaceIndentation: None
+
+# --- 大括号风格 (核心) ---
+# Allman 风格：所有大括号强制独占一行
+# 效果：
+# void func()
+# {
+#     ...
+# }
+BreakBeforeBraces: Allman
+
+# --- 对齐与空行 ---
+# 访问修饰符 (public/private/protected) 的偏移
+# 设置为 -4 表示向左回退 4 格，从而与 class 关键字对齐
+# 效果：
+# class A
+# {
+# public:  <-- 靠左对齐，不缩进
+#     void func();
+# };
+AccessModifierOffset: -4
+
+# 指针和引用的对齐方式
+# Left:   int* p; (VS 现代风格常见)
+# Right:  int *p; (旧式 C 风格)
+# Middle: int * p;
+PointerAlignment: Left
+
+# --- 换行规则 ---
+# 允许短的函数放在同一行 (例如 getter/setter)
+# int getX() { return x; }
+AllowShortFunctionsOnASingleLine: Inline
+
+# 允许短的 if 语句放在同一行
+# if (a) return;
+AllowShortIfStatementsOnASingleLine: false
+
+# 允许短的 case 标签放在同一行
+AllowShortCaseLabelsOnASingleLine: false
+
+# --- 杂项 ---
+# 自动排序头文件 (VS 本身不强制，但推荐开启)
+SortIncludes:    true
+# 保持头文件的空行分组，不强行合并所有 include
+IncludeBlocks: Preserve
+
+# 在控制语句 (if/while/for) 的括号前加空格
+# if (...) 而不是 if(...)
+SpaceBeforeParens: ControlStatements
+
+# 模板定义的尖括号内不加空格 vector<int>
+SpacesInAngles:  false
+
+# 最大行宽 (超过这个长度会自动换行)
+# VS 默认比较宽容，设为 120 或 0 (不限制)
+ColumnLimit:     120
+
+# 关键设置：开括号后如果不换行，不要跟括号对齐，而是使用缩进
+# 这样是:
+# vector v = {
+#     {...}
+# };
+# 而不是:
+# vector v = { {...},
+#              {...} };
+AlignAfterOpenBracket: BlockIndent
+...
