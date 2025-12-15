@@ -1,1 +1,1 @@
-# -visual-studio-.clang-format
+# VisualStudio风格的.clang-format
