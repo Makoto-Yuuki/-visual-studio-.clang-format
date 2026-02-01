@@ -52,14 +52,21 @@ AllowShortFunctionsOnASingleLine: Inline
 
 # 允许短的 if 语句放在同一行
 # if (a) return;
-AllowShortIfStatementsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: true
 
 # 允许短的 case 标签放在同一行
-AllowShortCaseLabelsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+
+# 允许短的循环语句放在同一行
+AllowShortLoopsOnASingleLine: true
+
+# 允许短的块放在同一行
+# { ... }
+AllowShortBlocksOnASingleLine: Empty
 
 # --- 杂项 ---
 # 自动排序头文件 (VS 本身不强制，但推荐开启)
-SortIncludes:    true
+SortIncludes:    false
 # 保持头文件的空行分组，不强行合并所有 include
 IncludeBlocks: Preserve
 
@@ -72,7 +79,7 @@ SpacesInAngles:  false
 
 # 最大行宽 (超过这个长度会自动换行)
 # VS 默认比较宽容，设为 120 或 0 (不限制)
-ColumnLimit:     120
+ColumnLimit:     0
 
 # 关键设置：开括号后如果不换行，不要跟括号对齐，而是使用缩进
 # 这样是:
@@ -83,4 +90,3 @@ ColumnLimit:     120
 # vector v = { {...},
 #              {...} };
 AlignAfterOpenBracket: BlockIndent
-...
